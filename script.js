@@ -1,4 +1,4 @@
-
+s.kd
 const thumbnail = document.getElementById('thumbnail');
 const popup = document.getElementById('popup');
 const closeBtn = document.getElementById('close');
@@ -16,4 +16,6 @@ popup.addEventListener('click', (e) => {
     popup.style.display = 'none';
   }
 });
+
+
     
