@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup Image</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="image-container">
+    <img src="image.jpg" alt="Thumbnail" id="thumbnail" class="thumbnail">
+  </div>
+
+  <div class="popup" id="popup">
+    <span class="close" id="close">&times;</span>
+    <img src="image.jpg" alt="Popup Image" class="popup-img">
+  </div>
+
+  <script>
+    const thumbnail = document.getElementById('thumbnail');
+    const popup = document.getElementById('popup');
+    const closeBtn = document.getElementById('close');
+
+    thumbnail.addEventListener('click', () => {
+      popup.style.display = 'flex';
+    });
+
+    closeBtn.addEventListener('click', () => {
+      popup.style.display = 'none';
+    });
+
+    popup.addEventListener('click', (e) => {
+      if (e.target === popup) {
+        popup.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
+
